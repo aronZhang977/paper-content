@@ -1,0 +1,59 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pylibs/
+**/.pylibs/
+
+# Virtual environments
+.venv/
+.venv*/
+venv/
+env/
+
+# Generated media
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.mp3
+*.m4a
+*.wav
+*.flac
+*.aac
+
+# Pipeline workdirs
+**/work/segments*/
+**/work/frames*/
+**/work/voice_refs/
+**/work/*.mp4
+
+# IDE / editor
+.idea/
+*.swp
+*.swo
+*~
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+credentials.json
+
+# Do not publish copyrighted paper PDFs
+*.pdf

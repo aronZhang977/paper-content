@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" version="24.0.0">
+  <diagram id="brook_mindmap" name="Brook精读思维导图">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1800" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="root" value="Brook for GPUs&lt;br&gt;Stream Computing on Graphics Hardware&lt;br&gt;(Buck et al., Stanford, SIGGRAPH 2004)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1976D2;strokeColor=#1565C0;fontColor=#000000;fontSize=15;fontStyle=1;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="848" width="240" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="b1" value="① 问题背景" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#42A5F5;strokeColor=#1976D2;fontColor=#000000;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="133" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b2" value="② 流编程模型：三个结构" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#42A5F5;strokeColor=#1976D2;fontColor=#000000;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="418" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b3" value="③ 编译器与运行时：虚拟化" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#42A5F5;strokeColor=#1976D2;fontColor=#000000;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="768" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b4" value="④ 实验证据：五个应用" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#42A5F5;strokeColor=#1976D2;fontColor=#000000;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="1183" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b5" value="⑤ 结论与历史影响" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#42A5F5;strokeColor=#1976D2;fontColor=#000000;fontSize=14;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="1533" width="180" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="l11" value="GPU 已可编程：顶点/片元处理器，已能跑线代、物理模拟、完整光追" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90CAF9;strokeColor=#42A5F5;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="680" y="40" width="320" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="l12" value="痛点①：算法必须写成纹理与三角形，显式调用图形 API" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90CAF9;strokeColor=#42A5F5;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="680" y="115" width="320" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="l13" value="痛点②：硬件限制裸露——指令数、输出个数、纹理尺寸、仅 float~float4" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90CAF9;strokeColor=#42A5F5;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="680" y="190" width="320" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="l14" value="结果：GPGPU 仅限最资深的图形开发者" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90CAF9;strokeColor=#42A5F5;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="680" y="265" width="320" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="l21" value="流 Stream：有名、有类型、有形状的记录集合；尖括号声明 float s&lt;10,5&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90CAF9;strokeColor=#42A5F5;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="680" y="340" width="320" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="l22" value="核函数 Kernel：隐式并行循环；四类参数：输入流 / out 输出 / 聚集[] / 常量" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90CAF9;strokeColor=#42A5F5;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="680" y="415" width="320" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="l23" value="归约 Reduction：多对一，只需结合律（不需交换律）；O(log n) 多 pass" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90CAF9;strokeColor=#42A5F5;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="680" y="490" width="320" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="l24" value="算术密度：临时值留在本地寄存器，仅最终结果写回内存" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90CAF9;strokeColor=#42A5F5;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="680" y="565" width="320" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="l31" value="brcc 源到源编译器：Brook → Cg → GPU 汇编；BRT 运行时库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90CAF9;strokeColor=#42A5F5;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="680" y="640" width="320" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="l32" value="三个后端：OpenGL / DirectX / CPU 参考实现" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90CAF9;strokeColor=#42A5F5;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="680" y="715" width="320" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="l33" value="执行映射：流=纹理，聚集=依赖纹理读取，调用 kernel=渲染一个四边形" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90CAF9;strokeColor=#42A5F5;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="680" y="790" width="320" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="l34" value="虚拟化内存：流环绕进 2D 纹理＋地址转换（ATI 上 1D 上限 2048→131072）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90CAF9;strokeColor=#42A5F5;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="680" y="865" width="320" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="l35" value="虚拟化输出：多输出拆成多 pass（Mat4Mult 减速 53%，Cloth 减速 47%）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90CAF9;strokeColor=#42A5F5;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="680" y="940" width="320" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="l36" value="结构体成员拆进多张纹理；OpenGL 受 Pbuffer 拷贝拖累" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90CAF9;strokeColor=#42A5F5;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="680" y="1015" width="320" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="l41" value="SAXPY：核函数只有一条 MAD，ATI DX 约 7× CPU（最好成绩）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90CAF9;strokeColor=#42A5F5;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="680" y="1090" width="320" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="l42" value="Segment（图像分割）：约 4.7× CPU" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90CAF9;strokeColor=#42A5F5;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="680" y="1165" width="320" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="l43" value="FFT：仅 0.99× CPU（最差；FFTW 用缓存分块，拿掉则 CPU 1224→204 MFLOPS）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90CAF9;strokeColor=#42A5F5;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="680" y="1240" width="320" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="l44" value="SGEMV / Ray Tracing：NVIDIA 上低于 CPU（765 vs 1407；50 vs 100）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90CAF9;strokeColor=#42A5F5;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="680" y="1315" width="320" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="l45" value="关键限定：图 3 数字不含 streamRead/Write 传输；DX ≈ 手写 GPU 代码 80%" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90CAF9;strokeColor=#42A5F5;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="680" y="1390" width="320" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="l46" value="代价模型：γ &gt; 1/(s−1)；短流被 CPU 发起 kernel 的固定开销主导（拐点约 65 万~200 万次浮点运算）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90CAF9;strokeColor=#42A5F5;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="680" y="1465" width="320" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="l51" value="愿景：GPU 不再只是渲染引擎，而是 PC 的主要计算引擎（预期，非实测结论）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90CAF9;strokeColor=#42A5F5;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="680" y="1540" width="320" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="l52" value="用好 GPU 的两条件：计算量盖住传输；单次 kernel 工作量盖住发起开销" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90CAF9;strokeColor=#42A5F5;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="680" y="1615" width="320" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="l53" value="Brook 开源（BSD/部分 GPL），主要测试版 2004，约 2007 年停更" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90CAF9;strokeColor=#42A5F5;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="680" y="1690" width="320" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="l54" value="CUDA 的学术前身；Buck 加入 NVIDIA 启动 CUDA（2004/2005）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90CAF9;strokeColor=#42A5F5;fontColor=#000000;fontSize=12;align=left;spacingLeft=8;" parent="1" vertex="1">
+          <mxGeometry x="680" y="1765" width="320" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e_r_b1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;curved=1;html=1;strokeWidth=2;strokeColor=#1976D2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="root" target="b1" edge="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_r_b2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;curved=1;html=1;strokeWidth=2;strokeColor=#1976D2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="root" target="b2" edge="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_r_b3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;curved=1;html=1;strokeWidth=2;strokeColor=#1976D2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="root" target="b3" edge="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_r_b4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;curved=1;html=1;strokeWidth=2;strokeColor=#1976D2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="root" target="b4" edge="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_r_b5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;curved=1;html=1;strokeWidth=2;strokeColor=#1976D2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="root" target="b5" edge="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="e_b1_l1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;curved=1;html=1;strokeWidth=2;strokeColor=#42A5F5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="b1" target="l11" edge="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_b1_l2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;curved=1;html=1;strokeWidth=2;strokeColor=#42A5F5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="b1" target="l12" edge="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_b1_l3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;curved=1;html=1;strokeWidth=2;strokeColor=#42A5F5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="b1" target="l13" edge="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_b1_l4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;curved=1;html=1;strokeWidth=2;strokeColor=#42A5F5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="b1" target="l14" edge="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="e_b2_l1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;curved=1;html=1;strokeWidth=2;strokeColor=#42A5F5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="b2" target="l21" edge="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_b2_l2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;curved=1;html=1;strokeWidth=2;strokeColor=#42A5F5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="b2" target="l22" edge="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_b2_l3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;curved=1;html=1;strokeWidth=2;strokeColor=#42A5F5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="b2" target="l23" edge="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_b2_l4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;curved=1;html=1;strokeWidth=2;strokeColor=#42A5F5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="b2" target="l24" edge="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="e_b3_l1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;curved=1;html=1;strokeWidth=2;strokeColor=#42A5F5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="b3" target="l31" edge="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_b3_l2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;curved=1;html=1;strokeWidth=2;strokeColor=#42A5F5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="b3" target="l32" edge="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_b3_l3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;curved=1;html=1;strokeWidth=2;strokeColor=#42A5F5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="b3" target="l33" edge="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_b3_l4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;curved=1;html=1;strokeWidth=2;strokeColor=#42A5F5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="b3" target="l34" edge="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_b3_l5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;curved=1;html=1;strokeWidth=2;strokeColor=#42A5F5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="b3" target="l35" edge="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_b3_l6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;curved=1;html=1;strokeWidth=2;strokeColor=#42A5F5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="b3" target="l36" edge="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="e_b4_l1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;curved=1;html=1;strokeWidth=2;strokeColor=#42A5F5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="b4" target="l41" edge="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_b4_l2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;curved=1;html=1;strokeWidth=2;strokeColor=#42A5F5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="b4" target="l42" edge="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_b4_l3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;curved=1;html=1;strokeWidth=2;strokeColor=#42A5F5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="b4" target="l43" edge="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_b4_l4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;curved=1;html=1;strokeWidth=2;strokeColor=#42A5F5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="b4" target="l44" edge="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_b4_l5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;curved=1;html=1;strokeWidth=2;strokeColor=#42A5F5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="b4" target="l45" edge="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_b4_l6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;curved=1;html=1;strokeWidth=2;strokeColor=#42A5F5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="b4" target="l46" edge="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="e_b5_l1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;curved=1;html=1;strokeWidth=2;strokeColor=#42A5F5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="b5" target="l51" edge="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_b5_l2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;curved=1;html=1;strokeWidth=2;strokeColor=#42A5F5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="b5" target="l52" edge="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_b5_l3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;curved=1;html=1;strokeWidth=2;strokeColor=#42A5F5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="b5" target="l53" edge="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_b5_l4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;curved=1;html=1;strokeWidth=2;strokeColor=#42A5F5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="b5" target="l54" edge="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
